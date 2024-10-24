@@ -1,0 +1,42 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 301
+  HorizontalOffset = 380
+  VerticalOffset = 256
+  Width = 388
+  object Con: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    Connected = True
+    DisableSavepoints = False
+    Port = 0
+    Database = 'D:\teste\lazarus\senha\banco.db'
+    Protocol = 'sqlite'
+    LibraryLocation = 'D:\teste\lazarus\senha\sqlite3.dll'
+    Left = 64
+    Top = 72
+  end
+  object DSQryUsuarios: TDataSource
+    DataSet = QryUsuarios
+    Left = 224
+    Top = 128
+  end
+  object QryUsuarios: TZQuery
+    Connection = Con
+    Active = True
+    SQL.Strings = (
+      'SELECT ID, NOME_COMPLETO, USUARIO FROM USUARIO'
+    )
+    Params = <>
+    Left = 151
+    Top = 102
+  end
+  object Qry: TZQuery
+    Connection = Con
+    Params = <>
+    Left = 86
+    Top = 180
+  end
+end

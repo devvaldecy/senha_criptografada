@@ -1,0 +1,59 @@
+object Form1: TForm1
+  Left = 458
+  Height = 188
+  Top = 291
+  Width = 270
+  Caption = 'Form1'
+  ClientHeight = 188
+  ClientWidth = 270
+  LCLVersion = '3.4.0.0'
+  object EdtSenha: TEdit
+    Left = 24
+    Height = 23
+    Top = 45
+    Width = 220
+    TabOrder = 0
+    Text = '123456'
+  end
+  object Label1: TLabel
+    Left = 25
+    Height = 15
+    Top = 24
+    Width = 90
+    Caption = 'Senha Informada'
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 15
+    Top = 80
+    Width = 67
+    Caption = 'Senha do BD'
+  end
+  object EdtSenhaBD: TEdit
+    Left = 25
+    Height = 23
+    Top = 96
+    Width = 220
+    Enabled = False
+    TabOrder = 1
+    Text = '6066184af5207c865dc20e099eec1524'
+  end
+  object Button1: TButton
+    Left = 24
+    Height = 25
+    Top = 144
+    Width = 216
+    Caption = 'Verificar'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 170
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Usuário'
+    TabOrder = 3
+    OnClick = Button2Click
+  end
+end

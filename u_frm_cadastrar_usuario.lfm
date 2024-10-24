@@ -1,0 +1,107 @@
+object FrmUsuario: TFrmUsuario
+  Left = 414
+  Height = 354
+  Top = 224
+  Width = 443
+  Caption = 'Cadastrar Usuário'
+  ClientHeight = 354
+  ClientWidth = 443
+  Font.Style = [fsBold]
+  OnShow = FormShow
+  LCLVersion = '3.4.0.0'
+  object DBUsuarios: TDBGrid
+    Left = 9
+    Height = 176
+    Top = 168
+    Width = 424
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'ID'
+        Width = 50
+        FieldName = 'ID'
+      end    
+      item
+        Title.Caption = 'NOME_COMPLETO'
+        Width = 200
+        FieldName = 'NOME_COMPLETO'
+      end    
+      item
+        Title.Caption = 'USUARIO'
+        FieldName = 'USUARIO'
+      end>
+    DataSource = DM.DSQryUsuarios
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgDisableInsert, dgDisplayMemoText]
+    TabOrder = 0
+  end
+  object PnlCampos: TPanel
+    Left = 16
+    Height = 120
+    Top = 8
+    Width = 410
+    ClientHeight = 120
+    ClientWidth = 410
+    Enabled = False
+    TabOrder = 1
+    object Label2: TLabel
+      Left = 8
+      Height = 15
+      Top = 6
+      Width = 34
+      Caption = 'Nome'
+    end
+    object EdtNome: TEdit
+      Left = 8
+      Height = 23
+      Top = 24
+      Width = 384
+      TabOrder = 0
+    end
+    object Label3: TLabel
+      Left = 8
+      Height = 15
+      Top = 64
+      Width = 42
+      Caption = 'Usuário'
+    end
+    object EdtUsuario: TEdit
+      Left = 8
+      Height = 23
+      Top = 80
+      Width = 160
+      TabOrder = 1
+    end
+    object Label4: TLabel
+      Left = 208
+      Height = 15
+      Top = 64
+      Width = 34
+      Caption = 'Senha'
+    end
+    object EdtSenha: TEdit
+      Left = 208
+      Height = 23
+      Top = 80
+      Width = 184
+      TabOrder = 2
+    end
+  end
+  object BtnNovoGravar: TButton
+    Left = 16
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = 'Novo'
+    TabOrder = 2
+    OnClick = BtnNovoGravarClick
+  end
+  object BtnCancelar: TButton
+    Left = 351
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = 'Cancelar'
+    TabOrder = 3
+    Visible = False
+  end
+end
